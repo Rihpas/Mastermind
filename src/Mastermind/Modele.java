@@ -1,11 +1,11 @@
 package Mastermind;
 
 import java.awt.Color;
-import java.util.ArrayList;
+
 
 public class Modele {
-	public ArrayList<Color> couleur=new ArrayList<>();
-	public int n_tentatives ;
-	public int difficulte;
+	public Color[] couleur= {Color.YELLOW,Color.GREEN,Color.BLUE,Color.MAGENTA,Color.RED,Color.ORANGE,Color.WHITE,Color.BLACK};
+	public static int n_tentatives=10 ;
+	public static int difficulte =4;
 	public enum etat {EN_COURS,GAGNE,PERDU};
 }
