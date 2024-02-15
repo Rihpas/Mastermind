@@ -3,5 +3,7 @@ package Mastermind;
 import java.awt.Color;
 
 public class Rangee {
-	Color[] jetons=new Color[Modele.difficulte];
+	public Color[] jetons=new Color[Modele.Difficulte];
+	public int indiceJeton=0;
+	
 }
