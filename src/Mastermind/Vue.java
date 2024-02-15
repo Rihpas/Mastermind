@@ -3,6 +3,7 @@ package Mastermind;
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Canvas;
+import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.Panel;
 
@@ -16,9 +17,10 @@ public class Vue extends Frame{
 		Panel VueClavier = new Panel();
 		Canvas VueProposition = new Canvas();
 		
-		for(int i=0; i<modl.couleur.length; i++) {
+		for(int i=0; i<modl.Couleur.length; i++) {
 			Button b = new Button();
-			b.setBackground(this.modl.couleur[i]);
+			b.setBackground(this.modl.Couleur[i]);
+			b.setPreferredSize(new Dimension(40,40));
 			VueClavier.add(b);
 		}
 		
