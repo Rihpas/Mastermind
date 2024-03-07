@@ -26,6 +26,32 @@ public class Modele {
 		
 	}
 	
+	public void evaluer() {
+		for (int i=0;i<this.Difficulte;i++) {
+			if (this.propositions[tentative].jetons[i]==this.conbinaison.jetons[i] ){
+				this.propositions[tentative].nbNoir++;
+			}
+			else {
+				for (int j=0;j<this.Difficulte;j++) {
+					if (this.propositions[tentative].jetons[i]==this.conbinaison.jetons[j]) {
+						this.propositions[tentative].nbBlanc++;
+					}
+				
+			}
+			}
+			
+		}
+		
+		
+	}
+	
+	
+	
+	
+	public Rangee uneProposition() {
+		return this.propositions[this.tentative];
+	}
+	
 	
 	
 	public static void main(String[] args) {
