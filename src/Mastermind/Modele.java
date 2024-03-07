@@ -11,17 +11,19 @@ public class Modele {
 	public static enum Etat {EN_COURS,GAGNE,PERDU};
 	
 	public Etat etat;
-	public Rangee conbinaison ;
+	public Rangee conbinaison=new Rangee();
 	public Rangee[] propositions=new Rangee[n_tentatives];
 	public int tentative;
 	
 	public Random gnr = new Random();
 	
 	public void choix_combinaison() {
-		for (int i=0 ;i<Difficulte-1;i++) {
-			Color x= Couleur[gnr.nextInt(0,this.Difficulte-1)];
-			conbinaison.jetons[i]=x;
+		for (int i=0 ;i<Difficulte;i++) {
+			
+			this.conbinaison.jetons[i]=Couleur[gnr.nextInt(0,this.Difficulte)];
+			
 		}
+		
 	}
 	
 	
@@ -31,7 +33,7 @@ public class Modele {
 		Modele modl=new Modele();
 		modl.choix_combinaison();
 		
-		System.out.println(modl.conbinaison);
+		
 	}
 	
 	
