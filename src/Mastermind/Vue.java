@@ -35,6 +35,7 @@ public class Vue extends Frame{
 	
 	public static void main(String[] args) {
 		Vue v = new Vue();
+		System.out.println("hello");
 	}
 	
 }
