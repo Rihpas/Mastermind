@@ -19,13 +19,20 @@ public class Modele {
 	
 	public void choix_combinaison() {
 		for (int i=0 ;i<Difficulte-1;i++) {
-			Color x= Couleur[gnr.nextInt()];
+			Color x= Couleur[gnr.nextInt(0,this.Difficulte-1)];
 			conbinaison.jetons[i]=x;
 		}
 	}
 	
 	
 	
+	public static void main(String[] args) {
+		Rangee rang=new Rangee();
+		Modele modl=new Modele();
+		modl.choix_combinaison();
+		
+		System.out.println(modl.conbinaison);
+	}
 	
 	
 	
