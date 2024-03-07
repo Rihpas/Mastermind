@@ -3,14 +3,13 @@ package Mastermind;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-public class Controleur implements WindowListener{
-	Vue vue;
+public class Controleur extends Vue implements WindowListener{
 	public Controleur() {
-		vue.addWindowListener(this);
+		addWindowListener(this);
 	}
 	
 	public static void main(String[] args) {
-		Controleur c = new Controleur();
+		new Controleur();
 	}
 
 	@Override
