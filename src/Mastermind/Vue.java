@@ -3,8 +3,10 @@ package Mastermind;
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Canvas;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Frame;
+import java.awt.Graphics;
 import java.awt.Panel;
 
 public class Vue extends Frame{
@@ -24,6 +26,9 @@ public class Vue extends Frame{
 			VueClavier.add(b);
 		}
 		
+		VueProposition.setBackground(Color.GRAY);
+		
+		
 		this.add(VueClavier, BorderLayout.SOUTH);
 		this.add(VueProposition, BorderLayout.NORTH);
 		
@@ -33,9 +38,12 @@ public class Vue extends Frame{
 		this.setVisible(true);
 	}
 	
+	public void paint(Graphics g) {
+		g.drawOval(0, 100, 100, 100);
+	}
+	
 	public static void main(String[] args) {
 		Vue v = new Vue();
-		System.out.println("hello");
 	}
 	
 }
