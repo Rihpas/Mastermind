@@ -36,6 +36,7 @@ public class Vue extends Frame{
 		this.add(VueClavier, BorderLayout.SOUTH);
 		this.add(VueProposition, BorderLayout.NORTH);
 		
+		
 		this.setSize(400, 750);
 		this.setTitle("Mastermind");
 		
@@ -50,6 +51,7 @@ public class Vue extends Frame{
 			emplj++;
 		}
 	}
+	
 	
 	public void paint(Graphics g) {
 		for(int i=0; i<4; i++) {
