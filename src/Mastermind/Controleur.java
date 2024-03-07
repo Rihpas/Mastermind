@@ -6,6 +6,7 @@ import java.awt.event.WindowListener;
 public class Controleur extends Vue implements WindowListener{
 	public Controleur() {
 		addWindowListener(this);
+		
 	}
 	
 	public static void main(String[] args) {

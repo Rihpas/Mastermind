@@ -11,6 +11,10 @@ import java.awt.Panel;
 
 public class Vue extends Frame{
 	Modele modl;
+	Button btn;
+	static int empl = 0;
+	static int emplj = 0;
+	
 	public Vue() {
 		this.modl = new Modele();
 		
@@ -20,10 +24,10 @@ public class Vue extends Frame{
 		Canvas VueProposition = new Canvas();
 		
 		for(int i=0; i<modl.Couleur.length; i++) {
-			Button b = new Button();
-			b.setBackground(this.modl.Couleur[i]);
-			b.setPreferredSize(new Dimension(40,40));
-			VueClavier.add(b);
+			btn = new Button();
+			btn.setBackground(this.modl.Couleur[i]);
+			btn.setPreferredSize(new Dimension(40,40));
+			VueClavier.add(btn);
 		}
 		
 		VueProposition.setBackground(Color.GRAY);
@@ -36,6 +40,15 @@ public class Vue extends Frame{
 		this.setTitle("Mastermind");
 		
 		this.setVisible(true);
+	}
+	
+	public void coloration(Graphics g, int i) {
+		g.setColor(this.modl.Couleur[i]);
+		g.fillOval(5+empl*90, 40+emplj*60, 50, 50);
+		empl++;
+		if(empl==4) {
+			emplj++;
+		}
 	}
 	
 	public void paint(Graphics g) {
